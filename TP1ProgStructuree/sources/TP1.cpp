@@ -43,9 +43,9 @@ int main()
 {
    setlocale(LC_ALL, "");
 
-   vector<int> nombre1 = {2, 4};
-   char operateur = '-';
-   vector<int> nombre2 = {4};
+   vector<int> nombre1 = {5, 0};
+   char operateur = '*';
+   vector<int> nombre2 = {3};
    bool erreur = false;
 
    calculer(nombre1, operateur, nombre2, erreur);

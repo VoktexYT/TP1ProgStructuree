@@ -1,10 +1,14 @@
 #include <vector>
 
 #include "addition.h"
+#include "UtilitairesVecteur.h"
 
 
 std::vector<int> addition(std::vector<int> nombre1, std::vector<int> nombre2)
 {
+    rogner_zeros_inutiles(nombre1);
+    rogner_zeros_inutiles(nombre2);
+
     std::vector<int> resultat;
 
     int retenu = 0;

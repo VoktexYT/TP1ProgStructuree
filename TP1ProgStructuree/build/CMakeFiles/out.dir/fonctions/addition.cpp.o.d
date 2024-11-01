@@ -51,4 +51,5 @@ CMakeFiles/out.dir/fonctions/addition.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/addition.h
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/addition.h \
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/UtilitairesVecteur.h

@@ -66,9 +66,45 @@ int vecteur_a_entier(std::vector<int> vec)
 
    for (int i=0; i<vec.size(); i++)
    {
-      entier *= 10 + vec.at(i);
+      entier = entier * 10 + vec.at(i);
    }
-   
+
    return entier;
+}
+
+void reajuster_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
+{
+    int grandeur_vecteur_nombre1 = n1.size();
+    int grandeur_vecteur_nombre2 = n2.size();
+
+    if (grandeur_vecteur_nombre1 > grandeur_vecteur_nombre2)
+    {
+        inverser(n2);
+
+        grandeur_vecteur_nombre1 -= grandeur_vecteur_nombre2;
+
+        for (int i=0; i<grandeur_vecteur_nombre1; i++)
+        {
+            n2.push_back(0);
+        }
+
+        inverser(n2);
+    }
+
+    else if (grandeur_vecteur_nombre2 > grandeur_vecteur_nombre1)
+    {
+        inverser(n1);
+
+        grandeur_vecteur_nombre2 -= grandeur_vecteur_nombre1;
+
+        for (int i=0; i<grandeur_vecteur_nombre2; i++)
+        {
+            n1.push_back(0);
+        }
+
+        inverser(n1);
+    }
+
+
 }
 
