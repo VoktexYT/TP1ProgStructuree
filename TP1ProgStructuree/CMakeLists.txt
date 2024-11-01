@@ -22,7 +22,8 @@ add_executable(out
 )
 
 add_executable(test
-    ./test/test.cpp
+    ./sources/UtilitairesVecteur.cpp
+    ./test/testUtilitaireVecteur.cpp
 )
 
 # Add include directory for header files

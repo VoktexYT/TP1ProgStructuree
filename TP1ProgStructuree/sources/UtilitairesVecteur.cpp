@@ -72,7 +72,7 @@ int vecteur_a_entier(std::vector<int> vec)
    return entier;
 }
 
-// 
+
 void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
 {
    inverser(n1);

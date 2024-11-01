@@ -43,19 +43,42 @@ bool test_egaliser_taille_vecteur_3()
 }
 
 
-void executer_tous_les_tests()
+int executer_tous_les_tests()
 {
-    const bool TEST_EGALISER_TAILLE_VECTEUR = (
-        test_egaliser_taille_vecteur_1() &&
-        test_egaliser_taille_vecteur_2() &&
-        test_egaliser_taille_vecteur_3()
-    );
+    std::vector<std::string> erreurs;
 
-    if (!TEST_EGALISER_TAILLE_VECTEUR)
+    if (!test_egaliser_taille_vecteur_1())
     {
-        std::cout << "Echec Egaliser_taille_vecteur()" << std::endl;
-        return;
+        erreurs.push_back("Echec, egaliser taille vecteur 1");
+    }
+
+    if (!test_egaliser_taille_vecteur_2())
+    {
+        erreurs.push_back("Echec, egaliser taille vecteur 2");
+    }
+
+    if (!test_egaliser_taille_vecteur_3())
+    {
+        erreurs.push_back("Echec, egaliser taille vecteur 3");
+    }
+
+    if (erreurs.size() > 0)
+    {
+        for (int e=0; e<erreurs.size(); e++)
+        {
+            std::cout << erreurs.at(e) << std::endl;
+        }
+
+        return 1;
     }
 
     std::cout << "TEST = OK" << std::endl;
+    
+    return 0;
+}
+
+
+int main()
+{
+    return executer_tous_les_tests();
 }

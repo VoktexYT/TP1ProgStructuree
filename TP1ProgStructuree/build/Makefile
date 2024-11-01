@@ -129,6 +129,19 @@ out/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/build
 .PHONY : out/fast
 
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
 fonctions/addition.o: fonctions/addition.cpp.o
 .PHONY : fonctions/addition.o
 
@@ -327,6 +340,7 @@ sources/UtilitairesVecteur.o: sources/UtilitairesVecteur.cpp.o
 # target to build an object file
 sources/UtilitairesVecteur.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/UtilitairesVecteur.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.o
 .PHONY : sources/UtilitairesVecteur.cpp.o
 
 sources/UtilitairesVecteur.i: sources/UtilitairesVecteur.cpp.i
@@ -335,6 +349,7 @@ sources/UtilitairesVecteur.i: sources/UtilitairesVecteur.cpp.i
 # target to preprocess a source file
 sources/UtilitairesVecteur.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/UtilitairesVecteur.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.i
 .PHONY : sources/UtilitairesVecteur.cpp.i
 
 sources/UtilitairesVecteur.s: sources/UtilitairesVecteur.cpp.s
@@ -343,7 +358,32 @@ sources/UtilitairesVecteur.s: sources/UtilitairesVecteur.cpp.s
 # target to generate assembly for a file
 sources/UtilitairesVecteur.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/UtilitairesVecteur.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.s
 .PHONY : sources/UtilitairesVecteur.cpp.s
+
+test/testUtilitaireVecteur.o: test/testUtilitaireVecteur.cpp.o
+.PHONY : test/testUtilitaireVecteur.o
+
+# target to build an object file
+test/testUtilitaireVecteur.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o
+.PHONY : test/testUtilitaireVecteur.cpp.o
+
+test/testUtilitaireVecteur.i: test/testUtilitaireVecteur.cpp.i
+.PHONY : test/testUtilitaireVecteur.i
+
+# target to preprocess a source file
+test/testUtilitaireVecteur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.i
+.PHONY : test/testUtilitaireVecteur.cpp.i
+
+test/testUtilitaireVecteur.s: test/testUtilitaireVecteur.cpp.s
+.PHONY : test/testUtilitaireVecteur.s
+
+# target to generate assembly for a file
+test/testUtilitaireVecteur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.s
+.PHONY : test/testUtilitaireVecteur.cpp.s
 
 # Help Target
 help:
@@ -354,6 +394,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... out"
+	@echo "... test"
 	@echo "... fonctions/addition.o"
 	@echo "... fonctions/addition.i"
 	@echo "... fonctions/addition.s"
@@ -381,6 +422,9 @@ help:
 	@echo "... sources/UtilitairesVecteur.o"
 	@echo "... sources/UtilitairesVecteur.i"
 	@echo "... sources/UtilitairesVecteur.s"
+	@echo "... test/testUtilitaireVecteur.o"
+	@echo "... test/testUtilitaireVecteur.i"
+	@echo "... test/testUtilitaireVecteur.s"
 .PHONY : help
 
 
