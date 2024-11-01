@@ -14,12 +14,11 @@
 
 std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<int> nombre2, bool erreur)
 {
-    reajuster_taille_vecteur(nombre1, nombre2);
-
-    int taille_max_vecteur = nombre1.size();
+    egaliser_taille_vecteur(nombre1, nombre2);
 
     std::vector<int> resultat;
 
+    return {};
 
     switch (operateur)
     {

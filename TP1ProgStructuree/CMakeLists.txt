@@ -21,6 +21,15 @@ add_executable(out
     ./fonctions/convertions.cpp
 )
 
+add_executable(test
+    ./test/test.cpp
+)
+
 # Add include directory for header files
 target_include_directories(
-    out PRIVATE ./includes)
+    out PRIVATE ./includes
+)
+
+target_include_directories(
+    test PRIVATE ./includes
+)

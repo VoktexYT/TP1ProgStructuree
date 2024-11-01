@@ -2,6 +2,7 @@
 // des nombres entiers positifs de taille illimit�e
 
 #include "LectureEtAffichage.h"   // Pour lire_premier_nombre_et_operateur, lire_deuxieme_nombre, afficher
+#include "UtilitairesVecteur.h"
 #include "Calculatrice.h"         // Pour calculer
 #include <iostream>
 #include <vector>
@@ -43,12 +44,11 @@ int main()
 {
    setlocale(LC_ALL, "");
 
-   vector<int> nombre1 = {5, 0};
-   char operateur = '*';
-   vector<int> nombre2 = {3};
-   bool erreur = false;
+   vector<int> nombre1 = {5, 0, 2, 3, 5, 2, 1, 4};
+   char operateur = '+';
+   vector<int> nombre2 = {3, 9, 2};
 
-   calculer(nombre1, operateur, nombre2, erreur);
+   calculer(nombre1, '+', nombre2, false);
 
    return 0;
 

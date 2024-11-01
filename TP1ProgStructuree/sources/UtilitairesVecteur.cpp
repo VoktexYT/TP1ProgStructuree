@@ -72,39 +72,40 @@ int vecteur_a_entier(std::vector<int> vec)
    return entier;
 }
 
-void reajuster_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
+// 
+void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
 {
-    int grandeur_vecteur_nombre1 = n1.size();
-    int grandeur_vecteur_nombre2 = n2.size();
+   inverser(n1);
+   inverser(n2);
 
-    if (grandeur_vecteur_nombre1 > grandeur_vecteur_nombre2)
-    {
-        inverser(n2);
+   int grandeur_vecteur_nombre1 = n1.size();
+   int grandeur_vecteur_nombre2 = n2.size();
+   int difference = grandeur_vecteur_nombre1 - grandeur_vecteur_nombre2;
 
-        grandeur_vecteur_nombre1 -= grandeur_vecteur_nombre2;
+   if (grandeur_vecteur_nombre1 == grandeur_vecteur_nombre2)
+   {
+      return;
+   }
 
-        for (int i=0; i<grandeur_vecteur_nombre1; i++)
-        {
-            n2.push_back(0);
-        }
+   if (grandeur_vecteur_nombre1 > grandeur_vecteur_nombre2)
+   {
+      for (int i=0; i<difference; i++)
+      {
+         n2.push_back(0);
+      }
+   }
 
-        inverser(n2);
-    }
+   else
+   {
+      difference *= -1;
 
-    else if (grandeur_vecteur_nombre2 > grandeur_vecteur_nombre1)
-    {
-        inverser(n1);
+      for (int i=0; i<difference; i++)
+      {
+         n2.push_back(0);
+      }
+   }
 
-        grandeur_vecteur_nombre2 -= grandeur_vecteur_nombre1;
-
-        for (int i=0; i<grandeur_vecteur_nombre2; i++)
-        {
-            n1.push_back(0);
-        }
-
-        inverser(n1);
-    }
-
-
+   inverser(n1);
+   inverser(n2);
 }
 
