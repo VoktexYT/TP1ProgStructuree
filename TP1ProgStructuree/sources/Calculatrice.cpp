@@ -11,14 +11,11 @@
 
 
 
-
 std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<int> nombre2, bool erreur)
 {
     egaliser_taille_vecteur(nombre1, nombre2);
 
     std::vector<int> resultat;
-
-    return {};
 
     switch (operateur)
     {
@@ -34,10 +31,10 @@ std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<
         resultat = multiplication(nombre1, nombre2);
         break;
     case DIVISION:
-        resultat = divisionModulo(nombre1, nombre2);
+        resultat = divisionModulo(nombre1, nombre2, true);
         break;
     case MODULO:
-        resultat = divisionModulo(nombre1, nombre2);
+        resultat = divisionModulo(nombre1, nombre2, false);
         break;
     case EXPOSANT:
         // resultat = exposa(nombre1, nombre2);
@@ -48,12 +45,12 @@ std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<
         break;
     }
 
-    inverser(resultat);
+    // inverser(resultat);
 
     std::cout << "=" << std::endl;
 
     afficher_entier_vecteur(resultat);
 
-    return {};
+    return resultat;
 }
 

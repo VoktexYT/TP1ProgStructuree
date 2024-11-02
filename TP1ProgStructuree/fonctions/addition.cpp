@@ -6,8 +6,11 @@
 
 std::vector<int> addition(std::vector<int> nombre1, std::vector<int> nombre2)
 {
-    rogner_zeros_inutiles(nombre1);
-    rogner_zeros_inutiles(nombre2);
+    // rogner_zeros_inutiles(nombre1);
+    // rogner_zeros_inutiles(nombre2);
+
+    inverser(nombre1);
+    inverser(nombre2);
 
     std::vector<int> resultat;
 
@@ -33,6 +36,13 @@ std::vector<int> addition(std::vector<int> nombre1, std::vector<int> nombre2)
 
         resultat.push_back(somme);   
     }
+
+    if (retenu != 0)
+    {
+        resultat.push_back(retenu);
+    }
+
+    inverser(resultat);
 
     return resultat;
 }

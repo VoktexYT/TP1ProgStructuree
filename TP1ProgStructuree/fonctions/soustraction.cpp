@@ -4,27 +4,18 @@
 #include "soustraction.h"
 #include "UtilitairesVecteur.h"
 
-//   12
-//   05
 
-//  -12
 std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2)
 {
-    rogner_zeros_inutiles(nombre1);
-    rogner_zeros_inutiles(nombre2);
-    inverser(nombre1);
-    inverser(nombre2);
-
-    int entier_vec_nombre1 = vecteur_a_entier(nombre1);
-    int entier_vec_nombre2 = vecteur_a_entier(nombre2);
-
+    std::vector<int> n1 = nombre1;
+    std::vector<int> n1 = nombre1;
     inverser(nombre1);
     inverser(nombre2);
 
     int retenu = 0;
     std::vector<int> resultat;
 
-    if (entier_vec_nombre2 > entier_vec_nombre1)
+    if (premier_vecteur_plus_grand_que_deuxieme(nombre1, nombre2))
     {
         for (int i=0; i<nombre1.size(); i++)
         {
@@ -51,11 +42,12 @@ std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2
 
             resultat.push_back(difference); 
         }
+
+        rogner_zeros_inutiles(resultat);
     }
 
-    else
+    else if (entier_vec_nombre1 > entier_vec_nombre2)
     {
-        
         for (int i=0; i<nombre1.size(); i++)
         {
             int chiffre_index_n1 = nombre1.at(i);
@@ -76,7 +68,16 @@ std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2
 
             resultat.push_back(difference); 
         }
+
+        rogner_zeros_inutiles(resultat);
     }
+
+    else
+    {
+        resultat = {0};
+    }
+
+    inverser(resultat);
     
     return resultat;
 }

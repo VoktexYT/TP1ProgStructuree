@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named out
-
-# Build rule for target.
-out: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 out
-.PHONY : out
-
-# fast build rule for target.
-out/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/build
-.PHONY : out/fast
-
-#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -147,7 +134,7 @@ fonctions/addition.o: fonctions/addition.cpp.o
 
 # target to build an object file
 fonctions/addition.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/addition.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/addition.cpp.o
 .PHONY : fonctions/addition.cpp.o
 
 fonctions/addition.i: fonctions/addition.cpp.i
@@ -155,7 +142,7 @@ fonctions/addition.i: fonctions/addition.cpp.i
 
 # target to preprocess a source file
 fonctions/addition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/addition.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/addition.cpp.i
 .PHONY : fonctions/addition.cpp.i
 
 fonctions/addition.s: fonctions/addition.cpp.s
@@ -163,39 +150,15 @@ fonctions/addition.s: fonctions/addition.cpp.s
 
 # target to generate assembly for a file
 fonctions/addition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/addition.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/addition.cpp.s
 .PHONY : fonctions/addition.cpp.s
-
-fonctions/convertions.o: fonctions/convertions.cpp.o
-.PHONY : fonctions/convertions.o
-
-# target to build an object file
-fonctions/convertions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/convertions.cpp.o
-.PHONY : fonctions/convertions.cpp.o
-
-fonctions/convertions.i: fonctions/convertions.cpp.i
-.PHONY : fonctions/convertions.i
-
-# target to preprocess a source file
-fonctions/convertions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/convertions.cpp.i
-.PHONY : fonctions/convertions.cpp.i
-
-fonctions/convertions.s: fonctions/convertions.cpp.s
-.PHONY : fonctions/convertions.s
-
-# target to generate assembly for a file
-fonctions/convertions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/convertions.cpp.s
-.PHONY : fonctions/convertions.cpp.s
 
 fonctions/divisionModulo.o: fonctions/divisionModulo.cpp.o
 .PHONY : fonctions/divisionModulo.o
 
 # target to build an object file
 fonctions/divisionModulo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/divisionModulo.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o
 .PHONY : fonctions/divisionModulo.cpp.o
 
 fonctions/divisionModulo.i: fonctions/divisionModulo.cpp.i
@@ -203,7 +166,7 @@ fonctions/divisionModulo.i: fonctions/divisionModulo.cpp.i
 
 # target to preprocess a source file
 fonctions/divisionModulo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/divisionModulo.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/divisionModulo.cpp.i
 .PHONY : fonctions/divisionModulo.cpp.i
 
 fonctions/divisionModulo.s: fonctions/divisionModulo.cpp.s
@@ -211,15 +174,39 @@ fonctions/divisionModulo.s: fonctions/divisionModulo.cpp.s
 
 # target to generate assembly for a file
 fonctions/divisionModulo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/divisionModulo.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/divisionModulo.cpp.s
 .PHONY : fonctions/divisionModulo.cpp.s
+
+fonctions/exposant.o: fonctions/exposant.cpp.o
+.PHONY : fonctions/exposant.o
+
+# target to build an object file
+fonctions/exposant.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/exposant.cpp.o
+.PHONY : fonctions/exposant.cpp.o
+
+fonctions/exposant.i: fonctions/exposant.cpp.i
+.PHONY : fonctions/exposant.i
+
+# target to preprocess a source file
+fonctions/exposant.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/exposant.cpp.i
+.PHONY : fonctions/exposant.cpp.i
+
+fonctions/exposant.s: fonctions/exposant.cpp.s
+.PHONY : fonctions/exposant.s
+
+# target to generate assembly for a file
+fonctions/exposant.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/exposant.cpp.s
+.PHONY : fonctions/exposant.cpp.s
 
 fonctions/multiplication.o: fonctions/multiplication.cpp.o
 .PHONY : fonctions/multiplication.o
 
 # target to build an object file
 fonctions/multiplication.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/multiplication.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/multiplication.cpp.o
 .PHONY : fonctions/multiplication.cpp.o
 
 fonctions/multiplication.i: fonctions/multiplication.cpp.i
@@ -227,7 +214,7 @@ fonctions/multiplication.i: fonctions/multiplication.cpp.i
 
 # target to preprocess a source file
 fonctions/multiplication.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/multiplication.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/multiplication.cpp.i
 .PHONY : fonctions/multiplication.cpp.i
 
 fonctions/multiplication.s: fonctions/multiplication.cpp.s
@@ -235,7 +222,7 @@ fonctions/multiplication.s: fonctions/multiplication.cpp.s
 
 # target to generate assembly for a file
 fonctions/multiplication.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/multiplication.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/multiplication.cpp.s
 .PHONY : fonctions/multiplication.cpp.s
 
 fonctions/soustraction.o: fonctions/soustraction.cpp.o
@@ -243,7 +230,7 @@ fonctions/soustraction.o: fonctions/soustraction.cpp.o
 
 # target to build an object file
 fonctions/soustraction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/soustraction.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/soustraction.cpp.o
 .PHONY : fonctions/soustraction.cpp.o
 
 fonctions/soustraction.i: fonctions/soustraction.cpp.i
@@ -251,7 +238,7 @@ fonctions/soustraction.i: fonctions/soustraction.cpp.i
 
 # target to preprocess a source file
 fonctions/soustraction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/soustraction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/soustraction.cpp.i
 .PHONY : fonctions/soustraction.cpp.i
 
 fonctions/soustraction.s: fonctions/soustraction.cpp.s
@@ -259,87 +246,14 @@ fonctions/soustraction.s: fonctions/soustraction.cpp.s
 
 # target to generate assembly for a file
 fonctions/soustraction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/soustraction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/soustraction.cpp.s
 .PHONY : fonctions/soustraction.cpp.s
-
-sources/Calculatrice.o: sources/Calculatrice.cpp.o
-.PHONY : sources/Calculatrice.o
-
-# target to build an object file
-sources/Calculatrice.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/Calculatrice.cpp.o
-.PHONY : sources/Calculatrice.cpp.o
-
-sources/Calculatrice.i: sources/Calculatrice.cpp.i
-.PHONY : sources/Calculatrice.i
-
-# target to preprocess a source file
-sources/Calculatrice.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/Calculatrice.cpp.i
-.PHONY : sources/Calculatrice.cpp.i
-
-sources/Calculatrice.s: sources/Calculatrice.cpp.s
-.PHONY : sources/Calculatrice.s
-
-# target to generate assembly for a file
-sources/Calculatrice.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/Calculatrice.cpp.s
-.PHONY : sources/Calculatrice.cpp.s
-
-sources/LectureEtAffichage.o: sources/LectureEtAffichage.cpp.o
-.PHONY : sources/LectureEtAffichage.o
-
-# target to build an object file
-sources/LectureEtAffichage.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/LectureEtAffichage.cpp.o
-.PHONY : sources/LectureEtAffichage.cpp.o
-
-sources/LectureEtAffichage.i: sources/LectureEtAffichage.cpp.i
-.PHONY : sources/LectureEtAffichage.i
-
-# target to preprocess a source file
-sources/LectureEtAffichage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/LectureEtAffichage.cpp.i
-.PHONY : sources/LectureEtAffichage.cpp.i
-
-sources/LectureEtAffichage.s: sources/LectureEtAffichage.cpp.s
-.PHONY : sources/LectureEtAffichage.s
-
-# target to generate assembly for a file
-sources/LectureEtAffichage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/LectureEtAffichage.cpp.s
-.PHONY : sources/LectureEtAffichage.cpp.s
-
-sources/TP1.o: sources/TP1.cpp.o
-.PHONY : sources/TP1.o
-
-# target to build an object file
-sources/TP1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/TP1.cpp.o
-.PHONY : sources/TP1.cpp.o
-
-sources/TP1.i: sources/TP1.cpp.i
-.PHONY : sources/TP1.i
-
-# target to preprocess a source file
-sources/TP1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/TP1.cpp.i
-.PHONY : sources/TP1.cpp.i
-
-sources/TP1.s: sources/TP1.cpp.s
-.PHONY : sources/TP1.s
-
-# target to generate assembly for a file
-sources/TP1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/TP1.cpp.s
-.PHONY : sources/TP1.cpp.s
 
 sources/UtilitairesVecteur.o: sources/UtilitairesVecteur.cpp.o
 .PHONY : sources/UtilitairesVecteur.o
 
 # target to build an object file
 sources/UtilitairesVecteur.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/UtilitairesVecteur.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.o
 .PHONY : sources/UtilitairesVecteur.cpp.o
 
@@ -348,7 +262,6 @@ sources/UtilitairesVecteur.i: sources/UtilitairesVecteur.cpp.i
 
 # target to preprocess a source file
 sources/UtilitairesVecteur.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/UtilitairesVecteur.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.i
 .PHONY : sources/UtilitairesVecteur.cpp.i
 
@@ -357,33 +270,32 @@ sources/UtilitairesVecteur.s: sources/UtilitairesVecteur.cpp.s
 
 # target to generate assembly for a file
 sources/UtilitairesVecteur.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/sources/UtilitairesVecteur.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.s
 .PHONY : sources/UtilitairesVecteur.cpp.s
 
-test/testUtilitaireVecteur.o: test/testUtilitaireVecteur.cpp.o
-.PHONY : test/testUtilitaireVecteur.o
+test/test.o: test/test.cpp.o
+.PHONY : test/test.o
 
 # target to build an object file
-test/testUtilitaireVecteur.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o
-.PHONY : test/testUtilitaireVecteur.cpp.o
+test/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cpp.o
+.PHONY : test/test.cpp.o
 
-test/testUtilitaireVecteur.i: test/testUtilitaireVecteur.cpp.i
-.PHONY : test/testUtilitaireVecteur.i
+test/test.i: test/test.cpp.i
+.PHONY : test/test.i
 
 # target to preprocess a source file
-test/testUtilitaireVecteur.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.i
-.PHONY : test/testUtilitaireVecteur.cpp.i
+test/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cpp.i
+.PHONY : test/test.cpp.i
 
-test/testUtilitaireVecteur.s: test/testUtilitaireVecteur.cpp.s
-.PHONY : test/testUtilitaireVecteur.s
+test/test.s: test/test.cpp.s
+.PHONY : test/test.s
 
 # target to generate assembly for a file
-test/testUtilitaireVecteur.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.s
-.PHONY : test/testUtilitaireVecteur.cpp.s
+test/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cpp.s
+.PHONY : test/test.cpp.s
 
 # Help Target
 help:
@@ -393,38 +305,28 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... out"
 	@echo "... test"
 	@echo "... fonctions/addition.o"
 	@echo "... fonctions/addition.i"
 	@echo "... fonctions/addition.s"
-	@echo "... fonctions/convertions.o"
-	@echo "... fonctions/convertions.i"
-	@echo "... fonctions/convertions.s"
 	@echo "... fonctions/divisionModulo.o"
 	@echo "... fonctions/divisionModulo.i"
 	@echo "... fonctions/divisionModulo.s"
+	@echo "... fonctions/exposant.o"
+	@echo "... fonctions/exposant.i"
+	@echo "... fonctions/exposant.s"
 	@echo "... fonctions/multiplication.o"
 	@echo "... fonctions/multiplication.i"
 	@echo "... fonctions/multiplication.s"
 	@echo "... fonctions/soustraction.o"
 	@echo "... fonctions/soustraction.i"
 	@echo "... fonctions/soustraction.s"
-	@echo "... sources/Calculatrice.o"
-	@echo "... sources/Calculatrice.i"
-	@echo "... sources/Calculatrice.s"
-	@echo "... sources/LectureEtAffichage.o"
-	@echo "... sources/LectureEtAffichage.i"
-	@echo "... sources/LectureEtAffichage.s"
-	@echo "... sources/TP1.o"
-	@echo "... sources/TP1.i"
-	@echo "... sources/TP1.s"
 	@echo "... sources/UtilitairesVecteur.o"
 	@echo "... sources/UtilitairesVecteur.i"
 	@echo "... sources/UtilitairesVecteur.s"
-	@echo "... test/testUtilitaireVecteur.o"
-	@echo "... test/testUtilitaireVecteur.i"
-	@echo "... test/testUtilitaireVecteur.s"
+	@echo "... test/test.o"
+	@echo "... test/test.i"
+	@echo "... test/test.s"
 .PHONY : help
 
 

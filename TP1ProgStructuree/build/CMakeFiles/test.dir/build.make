@@ -83,33 +83,113 @@ CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/sources/UtilitairesVecteur.cpp -o CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.s
 
-CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o: /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/test/testUtilitaireVecteur.cpp
-CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o -MF CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o.d -o CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o -c /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/test/testUtilitaireVecteur.cpp
+CMakeFiles/test.dir/fonctions/addition.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/fonctions/addition.cpp.o: /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/addition.cpp
+CMakeFiles/test.dir/fonctions/addition.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/fonctions/addition.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/fonctions/addition.cpp.o -MF CMakeFiles/test.dir/fonctions/addition.cpp.o.d -o CMakeFiles/test.dir/fonctions/addition.cpp.o -c /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/addition.cpp
 
-CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/test/testUtilitaireVecteur.cpp > CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.i
+CMakeFiles/test.dir/fonctions/addition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/fonctions/addition.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/addition.cpp > CMakeFiles/test.dir/fonctions/addition.cpp.i
 
-CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/test/testUtilitaireVecteur.cpp -o CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.s
+CMakeFiles/test.dir/fonctions/addition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/fonctions/addition.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/addition.cpp -o CMakeFiles/test.dir/fonctions/addition.cpp.s
+
+CMakeFiles/test.dir/fonctions/soustraction.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/fonctions/soustraction.cpp.o: /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/soustraction.cpp
+CMakeFiles/test.dir/fonctions/soustraction.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/fonctions/soustraction.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/fonctions/soustraction.cpp.o -MF CMakeFiles/test.dir/fonctions/soustraction.cpp.o.d -o CMakeFiles/test.dir/fonctions/soustraction.cpp.o -c /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/soustraction.cpp
+
+CMakeFiles/test.dir/fonctions/soustraction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/fonctions/soustraction.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/soustraction.cpp > CMakeFiles/test.dir/fonctions/soustraction.cpp.i
+
+CMakeFiles/test.dir/fonctions/soustraction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/fonctions/soustraction.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/soustraction.cpp -o CMakeFiles/test.dir/fonctions/soustraction.cpp.s
+
+CMakeFiles/test.dir/fonctions/multiplication.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/fonctions/multiplication.cpp.o: /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/multiplication.cpp
+CMakeFiles/test.dir/fonctions/multiplication.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/fonctions/multiplication.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/fonctions/multiplication.cpp.o -MF CMakeFiles/test.dir/fonctions/multiplication.cpp.o.d -o CMakeFiles/test.dir/fonctions/multiplication.cpp.o -c /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/multiplication.cpp
+
+CMakeFiles/test.dir/fonctions/multiplication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/fonctions/multiplication.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/multiplication.cpp > CMakeFiles/test.dir/fonctions/multiplication.cpp.i
+
+CMakeFiles/test.dir/fonctions/multiplication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/fonctions/multiplication.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/multiplication.cpp -o CMakeFiles/test.dir/fonctions/multiplication.cpp.s
+
+CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o: /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/divisionModulo.cpp
+CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o -MF CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o.d -o CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o -c /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/divisionModulo.cpp
+
+CMakeFiles/test.dir/fonctions/divisionModulo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/fonctions/divisionModulo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/divisionModulo.cpp > CMakeFiles/test.dir/fonctions/divisionModulo.cpp.i
+
+CMakeFiles/test.dir/fonctions/divisionModulo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/fonctions/divisionModulo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/divisionModulo.cpp -o CMakeFiles/test.dir/fonctions/divisionModulo.cpp.s
+
+CMakeFiles/test.dir/fonctions/exposant.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/fonctions/exposant.cpp.o: /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/exposant.cpp
+CMakeFiles/test.dir/fonctions/exposant.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/fonctions/exposant.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/fonctions/exposant.cpp.o -MF CMakeFiles/test.dir/fonctions/exposant.cpp.o.d -o CMakeFiles/test.dir/fonctions/exposant.cpp.o -c /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/exposant.cpp
+
+CMakeFiles/test.dir/fonctions/exposant.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/fonctions/exposant.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/exposant.cpp > CMakeFiles/test.dir/fonctions/exposant.cpp.i
+
+CMakeFiles/test.dir/fonctions/exposant.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/fonctions/exposant.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/exposant.cpp -o CMakeFiles/test.dir/fonctions/exposant.cpp.s
+
+CMakeFiles/test.dir/test/test.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/test/test.cpp.o: /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/test/test.cpp
+CMakeFiles/test.dir/test/test.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/test/test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/test.cpp.o -MF CMakeFiles/test.dir/test/test.cpp.o.d -o CMakeFiles/test.dir/test/test.cpp.o -c /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/test/test.cpp
+
+CMakeFiles/test.dir/test/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/test/test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/test/test.cpp > CMakeFiles/test.dir/test/test.cpp.i
+
+CMakeFiles/test.dir/test/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/test/test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/test/test.cpp -o CMakeFiles/test.dir/test/test.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.o" \
-"CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o"
+"CMakeFiles/test.dir/fonctions/addition.cpp.o" \
+"CMakeFiles/test.dir/fonctions/soustraction.cpp.o" \
+"CMakeFiles/test.dir/fonctions/multiplication.cpp.o" \
+"CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o" \
+"CMakeFiles/test.dir/fonctions/exposant.cpp.o" \
+"CMakeFiles/test.dir/test/test.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
 test: CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.o
-test: CMakeFiles/test.dir/test/testUtilitaireVecteur.cpp.o
+test: CMakeFiles/test.dir/fonctions/addition.cpp.o
+test: CMakeFiles/test.dir/fonctions/soustraction.cpp.o
+test: CMakeFiles/test.dir/fonctions/multiplication.cpp.o
+test: CMakeFiles/test.dir/fonctions/divisionModulo.cpp.o
+test: CMakeFiles/test.dir/fonctions/exposant.cpp.o
+test: CMakeFiles/test.dir/test/test.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

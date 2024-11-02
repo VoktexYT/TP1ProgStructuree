@@ -23,3 +23,4 @@ const char EXPOSANT = '^';
 const char EGALE = '=';
 
 const int CODE_ERREUR = -1;
+const std::vector<int> CODE_ERREUR_DIV_MOD = { -1 };

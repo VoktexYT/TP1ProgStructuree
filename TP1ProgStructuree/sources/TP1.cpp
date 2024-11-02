@@ -25,7 +25,10 @@ void calculer_et_afficher_resultat(vector<int> nombre1, char operateur, vector<i
    bool erreur;
    vector<int> resultat = calculer(nombre1, operateur, nombre2, erreur);
 
+   afficher_vecteur_int(resultat);
+   
    cout << endl;
+
    // On affiche le r�sultat s'il n'y a pas eu d'erreur de calcul
    if (!erreur)
    {
@@ -44,13 +47,9 @@ int main()
 {
    setlocale(LC_ALL, "");
 
-   vector<int> nombre1 = {5, 0, 2, 3, 5, 2, 1, 4};
-   char operateur = '+';
-   vector<int> nombre2 = {3, 9, 2};
-
-   calculer(nombre1, '+', nombre2, false);
-
-   return 0;
+   vector<int> nombre1;
+   char operateur;
+   vector<int> nombre2;
 
    cout << "Entrez une opération arithmétique: ";
    bool estValide = lire_premier_nombre_et_operateur(nombre1, operateur);
