@@ -10,15 +10,22 @@
 
 std::vector<int> divisionModulo(std::vector<int> nombre1, std::vector<int> nombre2, bool estUneDivision)
 {
-    int entierNombre1 = vecteur_a_entier(nombre1);
-    int entierNombre2 = vecteur_a_entier(nombre2);
+    std::vector<int> entierNombre1 = nombre1;
+    std::vector<int> entierNombre2 = nombre2;
 
-    if (entierNombre1 == 0)
+    inverser(entierNombre1);
+    inverser(entierNombre2);
+
+    rogner_zeros_inutiles(entierNombre1);
+    rogner_zeros_inutiles(entierNombre2);
+
+
+    if (entierNombre1.size() == 1 && entierNombre1.at(0) == 0)
     {
         return {0};
     }
 
-    if (entierNombre2 == 0)
+    if (entierNombre2.size() == 1 && entierNombre2.at(0) == 0)
     {
         return CODE_ERREUR_DIV_MOD;
     }
@@ -26,7 +33,7 @@ std::vector<int> divisionModulo(std::vector<int> nombre1, std::vector<int> nombr
     std::vector<int> compteur = {0};
     std::vector<int> inc1 = {1};
 
-    while (vecteur_a_entier(nombre2) <= vecteur_a_entier(nombre1))
+    while (premier_vecteur_plus_grand_que_deuxieme(nombre2, nombre1, true))
     {
         nombre1 = soustraction(nombre1, nombre2);
         egaliser_taille_vecteur(nombre1, nombre2);

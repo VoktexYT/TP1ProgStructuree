@@ -9,7 +9,15 @@
 
 void afficher(std::vector<int> resultat)
 {
+    for (int i=resultat.size()-1; i>=0; i--)
+    {
+        std::cout << resultat.at(i);
 
+        if (i % 3 == 0)
+        {
+            std::cout << " ";
+        }
+    }
 }
 
 
@@ -41,7 +49,7 @@ bool lire_premier_nombre_et_operateur(std::vector<int> &nombre1, char &operateur
             {
                 operateur = OPERATEURS[i];
 
-                if (caractere == operateur)
+                if (caractere == operateur && nombre1.size() > 0)
                 {
                     return true;
                 }
@@ -75,7 +83,7 @@ bool lire_deuxieme_nombre(std::vector<int> &nombre2)
 
         else
         {
-            return caractere == EGALE;
+            return caractere == EGALE && nombre2.size() > 0;
         }
     }
 

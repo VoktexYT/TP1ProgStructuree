@@ -58,7 +58,7 @@ bool test_vecteur_plus_grand_1()
 
     bool resultat = true;
 
-    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2);
+    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -70,7 +70,7 @@ bool test_vecteur_plus_grand_2()
 
     bool resultat = false;
 
-    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2);
+    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -82,7 +82,7 @@ bool test_vecteur_plus_grand_3()
 
     bool resultat = false;
 
-    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2);
+    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -94,7 +94,7 @@ bool test_vecteur_plus_grand_4()
 
     bool resultat = true;
 
-    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2);
+    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -106,7 +106,7 @@ bool test_vecteur_plus_grand_5()
 
     bool resultat = false;
 
-    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2);
+    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -118,7 +118,7 @@ bool test_vecteur_plus_grand_6()
 
     bool resultat = true;
 
-    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2);
+    bool r = premier_vecteur_plus_grand_que_deuxieme(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -287,7 +287,7 @@ bool test_soustraction_9()
 }
 
 bool test_soustraction_10()
-{    
+{
     std::vector<int> nbr1 = {0, 9};
     std::vector<int> nbr2 = {1, 2};
 
@@ -522,10 +522,22 @@ bool test_exposant_3()
 
 bool test_exposant_4()
 {
-    std::vector<int> nbr1 = {0, 3, 2};
-    std::vector<int> nbr2 = {0, 1, 0};
+    std::vector<int> nbr1 = {3, 2};
+    std::vector<int> nbr2 = {1, 0};
 
     std::vector<int> resultat = { 1, 1, 2, 5, 8, 9, 9, 9, 0, 6, 8, 4, 2, 6, 2, 4 };
+
+    std::vector<int> r = exposant(nbr1, nbr2);
+
+    return r == resultat;
+}
+
+bool test_exposant_5()
+{
+    std::vector<int> nbr1 = {1, 0};
+    std::vector<int> nbr2 = {0, 2};
+
+    std::vector<int> resultat = { 1, 0, 0 };
 
     std::vector<int> r = exposant(nbr1, nbr2);
 
@@ -756,7 +768,10 @@ int executer_tous_les_tests()
         erreurs.push_back("Echec, exposant 4");
     }
 
-    
+    if (!test_exposant_5())
+    {
+        erreurs.push_back("Echec, exposant 5");
+    }
 
 ///////
 

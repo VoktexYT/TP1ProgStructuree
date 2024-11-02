@@ -23,10 +23,9 @@ void pause()
 void calculer_et_afficher_resultat(vector<int> nombre1, char operateur, vector<int> nombre2)
 {
    bool erreur;
+
    vector<int> resultat = calculer(nombre1, operateur, nombre2, erreur);
 
-   afficher_vecteur_int(resultat);
-   
    cout << endl;
 
    // On affiche le r�sultat s'il n'y a pas eu d'erreur de calcul

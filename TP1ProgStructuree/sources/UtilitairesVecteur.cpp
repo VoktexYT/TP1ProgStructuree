@@ -121,7 +121,7 @@ void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
 }
 
 
-bool premier_vecteur_plus_grand_que_deuxieme(std::vector<int> nbr1, std::vector<int> nbr2)
+bool premier_vecteur_plus_grand_que_deuxieme(std::vector<int> nbr1, std::vector<int> nbr2, bool plusGrandEgale)
 {
    inverser(nbr1);
    rogner_zeros_inutiles(nbr1);

@@ -52,10 +52,11 @@ CMakeFiles/out.dir/sources/Calculatrice.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/sources/../includes/addition.h \
- /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/sources/../includes/soustraction.h \
- /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/sources/../includes/multiplication.h \
- /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/sources/../includes/divisionModulo.h \
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/addition.h \
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/soustraction.h \
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/multiplication.h \
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/divisionModulo.h \
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/exposant.h \
  /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/UtilitairesVecteur.h \
  /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/constantes.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \

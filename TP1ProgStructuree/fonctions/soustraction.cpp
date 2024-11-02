@@ -8,14 +8,15 @@
 std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2)
 {
     std::vector<int> n1 = nombre1;
-    std::vector<int> n1 = nombre1;
+    std::vector<int> n2 = nombre2;
+
     inverser(nombre1);
     inverser(nombre2);
 
     int retenu = 0;
     std::vector<int> resultat;
 
-    if (premier_vecteur_plus_grand_que_deuxieme(nombre1, nombre2))
+    if (premier_vecteur_plus_grand_que_deuxieme(n2, n1, false))
     {
         for (int i=0; i<nombre1.size(); i++)
         {
@@ -37,7 +38,15 @@ std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2
 
             if (i == nombre1.size()-1)
             {
-                difference *= -1;
+                if (difference == 0)
+                {
+                    resultat.at(i-1) *= -1;
+                }
+
+                else
+                {
+                    difference *= -1;
+                }
             }
 
             resultat.push_back(difference); 
@@ -46,7 +55,7 @@ std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2
         rogner_zeros_inutiles(resultat);
     }
 
-    else if (entier_vec_nombre1 > entier_vec_nombre2)
+    else if (premier_vecteur_plus_grand_que_deuxieme(n1, n2, false))
     {
         for (int i=0; i<nombre1.size(); i++)
         {

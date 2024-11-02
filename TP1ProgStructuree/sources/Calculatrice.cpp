@@ -1,8 +1,9 @@
 #include "Calculatrice.h"
-#include "../includes/addition.h"
-#include "../includes/soustraction.h"
-#include "../includes/multiplication.h"
-#include "../includes/divisionModulo.h"
+#include "addition.h"
+#include "soustraction.h"
+#include "multiplication.h"
+#include "divisionModulo.h"
+#include "exposant.h"
 #include "UtilitairesVecteur.h"
 #include "constantes.h"
 
@@ -11,10 +12,10 @@
 
 
 
-std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<int> nombre2, bool erreur)
+std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<int> nombre2, bool& erreur)
 {
     egaliser_taille_vecteur(nombre1, nombre2);
-
+    erreur = false;
     std::vector<int> resultat;
 
     switch (operateur)
@@ -31,13 +32,15 @@ std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<
         resultat = multiplication(nombre1, nombre2);
         break;
     case DIVISION:
-        resultat = divisionModulo(nombre1, nombre2, true);
-        break;
     case MODULO:
-        resultat = divisionModulo(nombre1, nombre2, false);
+        resultat = divisionModulo(nombre1, nombre2, operateur == DIVISION);
+        if (resultat == CODE_ERREUR_DIV_MOD)
+        {
+            erreur = true;
+        }
         break;
     case EXPOSANT:
-        // resultat = exposa(nombre1, nombre2);
+        resultat = exposant(nombre1, nombre2);
         break;
     
     
@@ -45,11 +48,7 @@ std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<
         break;
     }
 
-    // inverser(resultat);
-
-    std::cout << "=" << std::endl;
-
-    afficher_entier_vecteur(resultat);
+    inverser(resultat);
 
     return resultat;
 }

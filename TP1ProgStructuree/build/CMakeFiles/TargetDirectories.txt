@@ -1,3 +1,4 @@
+/home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles/out.dir
 /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles/test.dir
 /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles/edit_cache.dir
 /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/build/CMakeFiles/rebuild_cache.dir

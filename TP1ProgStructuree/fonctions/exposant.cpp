@@ -27,7 +27,7 @@ std::vector<int> exposant(std::vector<int> nombre1, std::vector<int> nombre2)
     while (nombre2.size() > 1 || vecteur_a_entier(nombre2) > 1)
     {
         resultat = multiplication(nombre1, resultat);
-
+        
         inverser(resultat);
         rogner_zeros_inutiles(resultat);
         inverser(resultat);
@@ -36,6 +36,5 @@ std::vector<int> exposant(std::vector<int> nombre1, std::vector<int> nombre2)
         nombre2 = soustraction(nombre2, decr1);
     }
 
-    rogner_zeros_inutiles(resultat);
     return resultat;
 }
