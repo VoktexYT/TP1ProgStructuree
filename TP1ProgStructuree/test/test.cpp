@@ -765,6 +765,8 @@ bool test_soustraction_3()
 
     std::vector<int> r = soustraction(nbr1, nbr2);
 
+    afficher_vecteur_int(r);
+
     return r == resultat;
 }
 
