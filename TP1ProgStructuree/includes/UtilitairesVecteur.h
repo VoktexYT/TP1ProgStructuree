@@ -16,7 +16,6 @@ void inverser(std::vector<int>& nombre);
 // Dans ce cas, nombre { 3, 2, 1 } apr�s l'ex�cution de la fonction
 void rogner_zeros_inutiles(std::vector<int>& nombre);
 
-
 void afficher_vecteur_int(std::vector<int> vec);
 
 void afficher_entier_vecteur(std::vector<int> vec);
@@ -26,6 +25,5 @@ int vecteur_a_entier(std::vector<int> vec);
 void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2);
 
 bool premier_vecteur_plus_grand_que_deuxieme(std::vector<int> nbr1, std::vector<int> nbr2,  bool plusGrandEgale);
-
 
 std::vector<int> convertire_nombre_string_en_vecteur(std::string nombre);

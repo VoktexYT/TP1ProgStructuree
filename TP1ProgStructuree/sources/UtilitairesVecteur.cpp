@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "constantes.h"
+#include "netoyage.h"
 #include "UtilitairesVecteur.h"
 
 
@@ -38,6 +39,7 @@ void inverser(std::vector<int>& nombre)
    }
 }
 
+
 /**
  * Rogner les zéros inutiles dans un vecteur entier.
  * 
@@ -56,6 +58,33 @@ void rogner_zeros_inutiles(std::vector<int>& nombre)
       nombre.pop_back();
    }
 }
+
+
+/**
+ * Agrandi un vecteur en ajoutant des zéros.
+ * 
+ * @param {std::vector<int>&} nombre Le vecteur qui représente un nombre.
+ * @param {int} tailleDePlus Le nombre de fois que le vecteur sera agrandi.
+ * @return {void}
+ * @author Ubert Guertin
+ * 
+ * nombre = {1, 2}
+ * tailleDePlus = 3
+ * 
+ * = {1, 2, 0, 0, 0}
+ */
+void agrandir_vecteur_entier(std::vector<int>& nombre, int tailleDePlus)
+{
+   inverser(nombre);
+
+   for (int i=0; i<tailleDePlus; i++)
+   {
+      nombre.push_back(0);
+   }
+
+   inverser(nombre);
+}
+
 
 /**
  * Égalise la taille des vecteurs en ajoutant des zéros.
@@ -76,33 +105,20 @@ void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
       return;
    }
 
-
    int difference = grandeur_vecteur_nombre1 - grandeur_vecteur_nombre2;
 
-   inverser(n1);
-   inverser(n2);
-
-   if (grandeur_vecteur_nombre1 > grandeur_vecteur_nombre2)
-   {
-      for (int i=0; i<difference; i++)
-      {
-         n2.push_back(0);
-      }
-   }
-
-   else
+   // Agrandir vecteur 1 si vecteur2 est plus grand.
+   if (grandeur_vecteur_nombre2 > grandeur_vecteur_nombre1)
    {
       difference *= -1;
-
-      for (int i=0; i<difference; i++)
-      {
-         n1.push_back(0);
-      }
+      agrandir_vecteur_entier(n1, difference);
+      return;
    }
 
-   inverser(n1);
-   inverser(n2);
+   // Agrandir vecteur 2, car le vecteur1 est plus grand.
+   agrandir_vecteur_entier(n2, difference);
 }
+
 
 /**
  * Converti un vecteur entier en nombre entier.
@@ -121,61 +137,70 @@ int vecteur_a_entier(std::vector<int> vec)
 
    for (int i=0; i<vec.size(); i++)
    {
-      entier = entier * 10 + vec.at(i);
+      entier *= 10;
+      entier += vec.at(i);
    }
 
    return entier;
 }
 
 
+/**
+ * Vérifie si le nombre premier vecteur entier est plus grand que le deuxième.
+ * 
+ * @param {std::vector<int>} nbr1 Le premier vecteur qui représente un nombre.
+ * @param {std::vector<int>} nbr2 Le deuxième vecteur qui représente un nombre.
+ * @return {bool} Retourne true si le premier vecteur nombre est plus grand que le deuxième.
+ * @author Ubert Guertin
+ * 
+ * nbr1 = {1, 2, 3, 0}
+ * nbr2 = {1, 3, 2}
+ * 
+ * = true
+ */
 bool premier_vecteur_plus_grand_que_deuxieme(std::vector<int> nbr1, std::vector<int> nbr2, bool plusGrandEgale)
 {
-   inverser(nbr1);
-   rogner_zeros_inutiles(nbr1);
-   inverser(nbr1);
+   // Enlève les zéros inutile dans le vecteur.
+   netoyage_vecteur_nombre(nbr1, true);
+   netoyage_vecteur_nombre(nbr2, true);
 
-   inverser(nbr2);
-   rogner_zeros_inutiles(nbr2);
-   inverser(nbr2);
-
-   if (nbr1.size() > nbr2.size())
+   if (nbr1.size() == nbr2.size())
    {
-      return true;
-   }
-
-   else if (nbr1.size() < nbr2.size())
-   {
-      return false;
-   }
-
-   else
-   {
+      // Essayer de trouver le un chiffre different dans le nombre
       for (int i=0; i<nbr1.size(); i++)
       {
          int chiffreNombre1 = nbr1.at(i);
          int chiffreNombre2 = nbr2.at(i);
 
-         if (chiffreNombre1 > chiffreNombre2)
+         if (chiffreNombre1 != chiffreNombre2)
          {
-            return true;
-         }
-
-         else if (chiffreNombre1 < chiffreNombre2)
-         {
-            return false;
+            return chiffreNombre1 > chiffreNombre2;
          }
       }
 
-      if (plusGrandEgale)
-      {
-         return true;
-      }
+      // Les deux nombres ont les mêmes chiffres, donc égale.
+      return plusGrandEgale;
    }
 
-   return false;
+   // Retourne si la taille des unités est supérieur. (Centaine > dizaine) {2, 3, 4} > {3, 2}
+   return nbr1.size() > nbr2.size();
 }
 
 
+/**
+ * IMPORTANT : Fonction utilisée dans les tests unitaires.
+ *             Donc inutile au fonctionnement du programme principale.
+ * Fonction qui converti une chaine de caractère en vecteur entier.
+ * C'est beaucoup plus rapide écrire "123 456 789" que {1, 2, 3, 4, 5, 6, 7, 8, 9}
+ * 
+ * @param {std::string} nombre
+ * @return {std::vector<int>} Retourne la convertion entre le string nombre et un vecteur entier
+ * @author Ubert Guertin
+ * 
+ * nombre = "1 234"
+ * 
+ * = {1, 2, 3, 4}
+ */
 std::vector<int> convertire_nombre_string_en_vecteur(std::string nombre)
 {
    std::vector<int> resultat = {};
@@ -184,6 +209,7 @@ std::vector<int> convertire_nombre_string_en_vecteur(std::string nombre)
    {
       char caractere = nombre.at(i);
 
+      // Le chiffre récupérer est l'index trouver en cherchant dans CHIFFRES
       if (isdigit(caractere))
       {
          int chiffre = CHIFFRES.find(caractere);

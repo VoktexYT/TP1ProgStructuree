@@ -8,6 +8,7 @@ Ce fichier contient le programme permettant de faire une soustraction entre 2 ve
 #include <iostream>
 #include <vector>
 
+#include "constantes.h"
 #include "netoyage.h"
 #include "soustraction.h"
 #include "UtilitairesVecteur.h"
@@ -42,7 +43,7 @@ std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2
     int retenu = 0;
     int tailleNombre = nombre1.size();
     int signe = recuperer_le_signe(nombre2PlusGrand);
-    std::vector<int> resultat = {0};
+    std::vector<int> resultat = VECTEUR_ZERO;
 
     if (nombre1PlusGrand || nombre2PlusGrand)
     {
@@ -60,10 +61,10 @@ std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2
                 // Le chiffre -0 n'existe pas.
                 if (!difference)
                 {
-                    resultat.at(i-1) *= -1;
+                    resultat.at(i - 1) *= NEGATIF;
                 }
 
-                difference *= -1;
+                difference *= NEGATIF;
             }
 
             resultat.push_back(difference); 
@@ -92,7 +93,7 @@ int calcul_soustraction(int chiffre1, int chiffre2, int& retenue, int signe)
     if (difference < 0)
     {
         retenue = 1;
-        difference += 10;
+        difference += BASE;
     }
 
     else
@@ -113,11 +114,11 @@ int calcul_soustraction(int chiffre1, int chiffre2, int& retenue, int signe)
  */
 int recuperer_le_signe(bool nombre2PlusGrand)
 {
-    int signe = 1;
+    int signe = POSITIF;
 
     if (nombre2PlusGrand)
     {
-        signe = -1;
+        signe = NEGATIF;
     }
 
     return signe;

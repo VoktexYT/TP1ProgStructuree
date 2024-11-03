@@ -9,6 +9,7 @@ Ce programme fait la multiplication entre 2 vecteurs de nombres
 #include <vector>
 
 #include "addition.h"
+#include "constantes.h"
 #include "netoyage.h"
 #include "multiplication.h"
 #include "UtilitairesVecteur.h"
@@ -37,7 +38,7 @@ std::vector<int> multiplication(std::vector<int> nombre1, std::vector<int> nombr
 {
     if (verification_multiplication_zero(nombre1, nombre2))
     {
-        return {0};
+        return VECTEUR_ZERO;
     }
 
     // Commencer par les unites
@@ -136,10 +137,10 @@ void multiplication_chiffre(int chiffre1, int chiffre2, int& retenue, std::vecto
     int produit = chiffre1 * chiffre2 + retenue;
     int unite = produit;
 
-    if (produit >= 10)
+    if (produit >= BASE)
     {
-        unite = produit % 10;
-        retenue = (produit - unite) / 10;
+        unite = produit % BASE;
+        retenue = (produit - unite) / BASE;
     }
 
     else

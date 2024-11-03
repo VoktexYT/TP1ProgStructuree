@@ -8,6 +8,7 @@ Ce fichier permet de faire une addition entre deux vecteurs.
 #include <vector>
 
 #include "addition.h"
+#include "constantes.h"
 #include "netoyage.h"
 #include "UtilitairesVecteur.h"
 
@@ -43,10 +44,10 @@ std::vector<int> addition(std::vector<int> nombre1, std::vector<int> nombre2)
 
         int somme = chiffreIndexNombre1 + chiffreIndexNombre2 + retenu;
 
-        if (somme >= 10)
+        if (somme >= BASE)
         {
             retenu = 1;
-            somme -= 10;
+            somme -= BASE;
         }
 
         // Réinialise la retenu à 0 si la somme ne dépasse pas 9.
@@ -66,6 +67,6 @@ std::vector<int> addition(std::vector<int> nombre1, std::vector<int> nombre2)
 
     // Netoyer et retourner le resultat.
     netoyage_vecteur_nombre(resultat, false);
-    
+
     return resultat;
 }

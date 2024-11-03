@@ -49,7 +49,7 @@ std::vector<int> division_modulo(std::vector<int> nombre1, std::vector<int> nomb
     // Zero divisé par quelque chose est toujours égale à zéro.
     if (nombre1Copie.size() == 1 && nombre1Copie.at(0) == 0)
     {
-        return {0};
+        return VECTEUR_ZERO;
     }
 
     // Un nombre divisé par zéro donne : ZeroDivisionError
@@ -59,8 +59,8 @@ std::vector<int> division_modulo(std::vector<int> nombre1, std::vector<int> nomb
     }
 
 
-    std::vector<int> compteur = {0};
-    std::vector<int> incrementation = {1};
+    std::vector<int> compteur = VECTEUR_ZERO;
+    std::vector<int> incrementation = VECTEUR_UN;
 
     // Soustraction des deux nombres jusqu'à que nombre1 soit plus petit que nombre2
     // while (nombre1 >= nombre2)

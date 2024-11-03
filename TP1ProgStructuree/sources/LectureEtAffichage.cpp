@@ -1,19 +1,39 @@
-#include "LectureEtAffichage.h"
-#include "constantes.h"
-#include "UtilitairesVecteur.h"
-#include "convertions.h"
+/*
 
+Les fonctions dans ce fichier permettent de lire et afficher les nombres dans le terminal.
+
+*/
+
+// Inclusion des librairies
 #include <vector>
 #include <iostream>
 
+#include "constantes.h"
+#include "convertions.h"
+#include "LectureEtAffichage.h"
+#include "UtilitairesVecteur.h"
 
-void afficher(std::vector<int> resultat)
+
+/**
+ * Afficher un vecteur entier avec un espacement tous les FREQUENCE_ESPACEMENT chiffres.
+ * 
+ * @param {std::vector<int>} vecteur Le vecteur qui représente un nombre.
+ * @return {void}
+ * @author Ubert Guertin
+ * 
+ * vec = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+ * FREQUENCE_ESPACEMENT = 3
+ * 
+ * = 123 456 789
+ */
+void afficher(std::vector<int> vecteur)
 {
-    for (int i=resultat.size()-1; i>=0; i--)
+    for (int i=vecteur.size()-1; i>=0; i--)
     {
-        std::cout << resultat.at(i);
+        std::cout << vecteur.at(i);
 
-        if (i % 3 == 0)
+        // Executé à tous les x chiffres
+        if (i % FREQUENCE_ESPACEMENT == 0)
         {
             std::cout << " ";
         }

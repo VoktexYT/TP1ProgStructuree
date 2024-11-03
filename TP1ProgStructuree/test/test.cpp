@@ -1,16 +1,17 @@
 #include <iostream>
 #include <vector>
 
-#include "UtilitairesVecteur.h"
 #include "addition.h"
-#include "soustraction.h"
-#include "multiplication.h"
+#include "constantes.h"
 #include "divisionModulo.h"
 #include "exposant.h"
-#include "constantes.h"
+#include "multiplication.h"
+#include "soustraction.h"
+#include "UtilitairesVecteur.h"
 
 // Structure pour stocker les données de chaque test
-struct TestCase {
+struct TestCase 
+{
     std::string nom;
     bool (*fonctionTest)();
 };
@@ -94,12 +95,12 @@ bool test_plan_de_test_24();
 
 
 // Fonction pour exécuter un test générique
-bool execute_test(const TestCase& testCase) {
+bool execute_test(const TestCase& testCase) 
+{
     std::string couleurNormal = "\033[0m";
     std::string couleurGris = "\033[90m";
     std::string couleurRouge = "\033[91m";
     std::string couleurVert = "\033[92m";
-    std::string couleurJaune = "\033[93m";
 
     std::cout << couleurGris << "Exécution: " << testCase.nom << couleurNormal << std::endl;
     bool resultat = testCase.fonctionTest();
@@ -115,7 +116,8 @@ bool execute_test(const TestCase& testCase) {
 }
 
 // Liste de tests avec les fonctions associées
-std::vector<TestCase> tests = {
+std::vector<TestCase> tests = 
+{
     {"Egaliser Taille 1", test_egaliser_taille_vecteur_1},
     {"Egaliser Taille 2", test_egaliser_taille_vecteur_2},
     {"Egaliser Taille 3", test_egaliser_taille_vecteur_3},
@@ -193,9 +195,11 @@ std::vector<TestCase> tests = {
     {"PLAN TEST #24", test_plan_de_test_24},
 };
 
-int main() {
+int main() 
+{
     // Exécute tous les tests
-    for (const auto& test : tests) {
+    for (const auto& test : tests) 
+    {
         execute_test(test);
     }
     return 0;
