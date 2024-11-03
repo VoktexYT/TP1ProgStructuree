@@ -1,15 +1,10 @@
 #pragma once
 
 #include <vector>
+#include <iostream>
 
 
-const std::vector<char> CHIFFRES = {
-    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
-};
-
-const std::vector<char> OPERATEURS = {
-    '+', '-', '*', 'x', 'X', '/', '%', '^'
-};
+const std::string CHIFFRES = "0123456789";
 
 const char ADDITION = '+';
 const char SOUSTRACTION = '-';
@@ -19,6 +14,11 @@ const char MULTIPLICATION_3 = 'X';
 const char DIVISION = '/';
 const char MODULO = '%';
 const char EXPOSANT = '^';
+
+const std::vector<char> OPERATEURS = {
+    ADDITION, SOUSTRACTION, MULTIPLICATION, MULTIPLICATION_2, MULTIPLICATION_3,
+    DIVISION, MODULO, EXPOSANT
+};
 
 const char EGALE = '=';
 

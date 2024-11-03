@@ -2,7 +2,7 @@
 // Biblioth�que fournissant des fonctions utilitaires pour l'utilisation de vecteurs d'entiers
 
 #include <vector>
-
+#include <iostream>
 
 // Inverse l'ordre des valeurs dans le vecteur d'entiers donn�.
 // Par exemple, si le vecteur contient { 1, 2, 3 } lors de l'appel,
@@ -26,3 +26,6 @@ int vecteur_a_entier(std::vector<int> vec);
 void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2);
 
 bool premier_vecteur_plus_grand_que_deuxieme(std::vector<int> nbr1, std::vector<int> nbr2,  bool plusGrandEgale);
+
+
+std::vector<int> convertire_nombre_string_en_vecteur(std::string nombre);

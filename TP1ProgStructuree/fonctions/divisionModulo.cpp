@@ -33,7 +33,7 @@ std::vector<int> divisionModulo(std::vector<int> nombre1, std::vector<int> nombr
     std::vector<int> compteur = {0};
     std::vector<int> inc1 = {1};
 
-    while (premier_vecteur_plus_grand_que_deuxieme(nombre2, nombre1, true))
+    while (premier_vecteur_plus_grand_que_deuxieme(nombre1, nombre2, true))
     {
         nombre1 = soustraction(nombre1, nombre2);
         egaliser_taille_vecteur(nombre1, nombre2);

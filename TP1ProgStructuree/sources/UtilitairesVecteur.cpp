@@ -1,5 +1,6 @@
 // Biblioth�que fournissant des fonctions utilitaires pour l'utilisation de vecteurs d'entiers
 #include "UtilitairesVecteur.h"
+#include "constantes.h"
 #include <iostream>
 
 
@@ -61,29 +62,6 @@ void afficher_vecteur_int(std::vector<int> vec)
 }
 
 
-void afficher_entier_vecteur(std::vector<int> vec)
-{
-   for (int i=0; i<vec.size(); i++)
-   {
-      std::cout << vec.at(i);
-   }
-
-   std::cout << std::endl;
-}
-
-int vecteur_a_entier(std::vector<int> vec)
-{
-   int entier = 0;
-
-   for (int i=0; i<vec.size(); i++)
-   {
-      entier = entier * 10 + vec.at(i);
-   }
-
-   return entier;
-}
-
-
 void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
 {
    int grandeur_vecteur_nombre1 = n1.size();
@@ -118,6 +96,18 @@ void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
 
    inverser(n1);
    inverser(n2);
+}
+
+int vecteur_a_entier(std::vector<int> vec)
+{
+   int entier = 0;
+
+   for (int i=0; i<vec.size(); i++)
+   {
+      entier = entier * 10 + vec.at(i);
+   }
+
+   return entier;
 }
 
 
@@ -158,8 +148,32 @@ bool premier_vecteur_plus_grand_que_deuxieme(std::vector<int> nbr1, std::vector<
             return false;
          }
       }
+
+      if (plusGrandEgale)
+      {
+         return true;
+      }
    }
 
    return false;
+}
+
+
+std::vector<int> convertire_nombre_string_en_vecteur(std::string nombre)
+{
+   std::vector<int> resultat = {};
+
+   for (int i=0; i<nombre.size(); i++)
+   {
+      char caractere = nombre.at(i);
+
+      if (isdigit(caractere))
+      {
+         int chiffre = CHIFFRES.find(caractere);
+         resultat.push_back(chiffre);
+      }
+   }
+
+   return resultat;
 }
 
