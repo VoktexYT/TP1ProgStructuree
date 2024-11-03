@@ -254,7 +254,7 @@ bool test_plan_de_test_4()
 
     std::vector<int> resultat = convertire_nombre_string_en_vecteur("834");
 
-    std::vector<int> r = divisionModulo(nbr1, nbr2, true);
+    std::vector<int> r = division_modulo(nbr1, nbr2, true);
 
     return resultat == r;
 }
@@ -268,7 +268,7 @@ bool test_plan_de_test_5()
 
     std::vector<int> resultat = convertire_nombre_string_en_vecteur("25");
 
-    std::vector<int> r = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> r = division_modulo(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -282,7 +282,7 @@ bool test_plan_de_test_6()
 
     std::vector<int> resultat = convertire_nombre_string_en_vecteur("0");
 
-    std::vector<int> r = divisionModulo(nbr1, nbr2, true);
+    std::vector<int> r = division_modulo(nbr1, nbr2, true);
 
     return resultat == r;
 }
@@ -296,7 +296,7 @@ bool test_plan_de_test_7()
 
     std::vector<int> resultat = convertire_nombre_string_en_vecteur("65");
 
-    std::vector<int> r = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> r = division_modulo(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -335,9 +335,6 @@ bool test_plan_de_test_10()
     std::vector<int> nbr2 = convertire_nombre_string_en_vecteur("832");
 
     egaliser_taille_vecteur(nbr1, nbr2);
-
-    afficher_vecteur_int(nbr1);
-    afficher_vecteur_int(nbr2);
 
     std::vector<int> resultat = {-8, 2, 0};
 
@@ -481,7 +478,7 @@ bool test_plan_de_test_20()
 
     std::vector<int> resultat = convertire_nombre_string_en_vecteur("8 582");
 
-    std::vector<int> r = divisionModulo(nbr1, nbr2, true);
+    std::vector<int> r = division_modulo(nbr1, nbr2, true);
 
     return resultat == r;
 }
@@ -495,7 +492,7 @@ bool test_plan_de_test_21()
 
     std::vector<int> resultat = convertire_nombre_string_en_vecteur("491 534 464 461 680 760 229 799 004 629 486 182");
 
-    std::vector<int> r = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> r = division_modulo(nbr1, nbr2, false);
 
     return resultat == r;
 }
@@ -964,8 +961,8 @@ bool test_division_modulo_1()
     std::vector<int> resultatDivision = {1};
     std::vector<int> resultatModulo = {0};
 
-    std::vector<int> rDiv = divisionModulo(nbr1, nbr2, true);
-    std::vector<int> rMod = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> rDiv = division_modulo(nbr1, nbr2, true);
+    std::vector<int> rMod = division_modulo(nbr1, nbr2, false);
 
     return rDiv == resultatDivision && rMod == resultatModulo;
 }
@@ -978,8 +975,8 @@ bool test_division_modulo_2()
     std::vector<int> resultatDivision = CODE_ERREUR_DIV_MOD;
     std::vector<int> resultatModulo = CODE_ERREUR_DIV_MOD;
 
-    std::vector<int> rDiv = divisionModulo(nbr1, nbr2, true);
-    std::vector<int> rMod = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> rDiv = division_modulo(nbr1, nbr2, true);
+    std::vector<int> rMod = division_modulo(nbr1, nbr2, false);
 
     return rDiv == resultatDivision && rMod == resultatModulo;
 }
@@ -992,8 +989,8 @@ bool test_division_modulo_3()
     std::vector<int> resultatDivision = {1, 0};
     std::vector<int> resultatModulo = {0};
 
-    std::vector<int> rDiv = divisionModulo(nbr1, nbr2, true);
-    std::vector<int> rMod = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> rDiv = division_modulo(nbr1, nbr2, true);
+    std::vector<int> rMod = division_modulo(nbr1, nbr2, false);
 
     return rDiv == resultatDivision && rMod == resultatModulo;
 }
@@ -1006,8 +1003,8 @@ bool test_division_modulo_4()
     std::vector<int> resultatDivision = {2, 3, 2};
     std::vector<int> resultatModulo = {1};
 
-    std::vector<int> rDiv = divisionModulo(nbr1, nbr2, true);
-    std::vector<int> rMod = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> rDiv = division_modulo(nbr1, nbr2, true);
+    std::vector<int> rMod = division_modulo(nbr1, nbr2, false);
 
     return rDiv == resultatDivision && rMod == resultatModulo;
 }
@@ -1020,8 +1017,8 @@ bool test_division_modulo_5()
     std::vector<int> resultatDivision = {9};
     std::vector<int> resultatModulo = {4, 1, 0, 6};
 
-    std::vector<int> rDiv = divisionModulo(nbr1, nbr2, true);
-    std::vector<int> rMod = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> rDiv = division_modulo(nbr1, nbr2, true);
+    std::vector<int> rMod = division_modulo(nbr1, nbr2, false);
 
     return rDiv == resultatDivision && rMod == resultatModulo;
 }
@@ -1034,8 +1031,8 @@ bool test_division_modulo_6()
     std::vector<int> resultatDivision = {0};
     std::vector<int> resultatModulo = {0};
 
-    std::vector<int> rDiv = divisionModulo(nbr1, nbr2, true);
-    std::vector<int> rMod = divisionModulo(nbr1, nbr2, false);
+    std::vector<int> rDiv = division_modulo(nbr1, nbr2, true);
+    std::vector<int> rMod = division_modulo(nbr1, nbr2, false);
 
     return rDiv == resultatDivision && rMod == resultatModulo;
 }

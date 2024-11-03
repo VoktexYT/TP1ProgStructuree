@@ -20,6 +20,7 @@ add_executable(out
     ./fonctions/soustraction.cpp
     ./fonctions/exposant.cpp
     ./fonctions/convertions.cpp
+    ./fonctions/netoyage.cpp
 )
 
 add_executable(test
@@ -29,6 +30,7 @@ add_executable(test
     ./fonctions/multiplication.cpp
     ./fonctions/divisionModulo.cpp
     ./fonctions/exposant.cpp
+    ./fonctions/netoyage.cpp
     ./test/test.cpp
 )
 

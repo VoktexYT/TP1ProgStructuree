@@ -8,6 +8,7 @@ Ce fichier permet de faire une addition entre deux vecteurs.
 #include <vector>
 
 #include "addition.h"
+#include "netoyage.h"
 #include "UtilitairesVecteur.h"
 
 
@@ -64,8 +65,7 @@ std::vector<int> addition(std::vector<int> nombre1, std::vector<int> nombre2)
     }
 
     // Netoyer et retourner le resultat.
-    rogner_zeros_inutiles(resultat);
-    inverser(resultat);
-
+    netoyage_vecteur_nombre(resultat, false);
+    
     return resultat;
 }

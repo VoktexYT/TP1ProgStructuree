@@ -1,12 +1,35 @@
-#include <vector>
+/*
+
+Ce fichier contient le programme permettant de faire une soustraction entre 2 vecteurs nombres 
+
+*/
+
+// Inclusion des librairies
 #include <iostream>
+#include <vector>
 
 #include "soustraction.h"
 #include "UtilitairesVecteur.h"
 
 
+/**
+ * Calcule la soustraction manuellement entre 2 vecteurs de nombres.
+ * 
+ * @param {std::vector<int>} nombre1 Le premier vecteur qui représente un nombre.
+ * @param {std::vector<int>} nombre2 Le deuxième vecteur qui représente un nombre.
+ * @return {std::vector<int>} Retourne la somme des deux vecteurs nombres
+ * @author Ubert Guertin
+ * 
+ * nombre1 = {1, 4, 0}
+ * nombre2 = {0, 2, 0}
+ * 
+ * calcul = nombre1 - nombre2
+ *        = {1, 2, 0}
+ */
 std::vector<int> soustraction(std::vector<int> nombre1, std::vector<int> nombre2)
 {
+    bool resultatNegatif = false;
+    
     std::vector<int> n1 = nombre1;
     std::vector<int> n2 = nombre2;
 

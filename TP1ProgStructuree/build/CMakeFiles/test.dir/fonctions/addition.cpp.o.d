@@ -52,6 +52,7 @@ CMakeFiles/test.dir/fonctions/addition.cpp.o: \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
  /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/addition.h \
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/netoyage.h \
  /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/UtilitairesVecteur.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/iosfwd \

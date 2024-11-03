@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/fonctions/exposant.cpp.o.d"
   "CMakeFiles/test.dir/fonctions/multiplication.cpp.o"
   "CMakeFiles/test.dir/fonctions/multiplication.cpp.o.d"
+  "CMakeFiles/test.dir/fonctions/netoyage.cpp.o"
+  "CMakeFiles/test.dir/fonctions/netoyage.cpp.o.d"
   "CMakeFiles/test.dir/fonctions/soustraction.cpp.o"
   "CMakeFiles/test.dir/fonctions/soustraction.cpp.o.d"
   "CMakeFiles/test.dir/sources/UtilitairesVecteur.cpp.o"

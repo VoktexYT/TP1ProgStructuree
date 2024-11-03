@@ -33,7 +33,7 @@ std::vector<int> calculer(std::vector<int> nombre1, char operateur, std::vector<
         break;
     case DIVISION:
     case MODULO:
-        resultat = divisionModulo(nombre1, nombre2, operateur == DIVISION);
+        resultat = division_modulo(nombre1, nombre2, operateur == DIVISION);
         if (resultat == CODE_ERREUR_DIV_MOD)
         {
             erreur = true;

@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/out.dir/fonctions/exposant.cpp.o.d"
   "CMakeFiles/out.dir/fonctions/multiplication.cpp.o"
   "CMakeFiles/out.dir/fonctions/multiplication.cpp.o.d"
+  "CMakeFiles/out.dir/fonctions/netoyage.cpp.o"
+  "CMakeFiles/out.dir/fonctions/netoyage.cpp.o.d"
   "CMakeFiles/out.dir/fonctions/soustraction.cpp.o"
   "CMakeFiles/out.dir/fonctions/soustraction.cpp.o.d"
   "CMakeFiles/out.dir/sources/Calculatrice.cpp.o"

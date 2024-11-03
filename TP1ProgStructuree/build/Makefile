@@ -274,6 +274,33 @@ fonctions/multiplication.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/multiplication.cpp.s
 .PHONY : fonctions/multiplication.cpp.s
 
+fonctions/netoyage.o: fonctions/netoyage.cpp.o
+.PHONY : fonctions/netoyage.o
+
+# target to build an object file
+fonctions/netoyage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/netoyage.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/netoyage.cpp.o
+.PHONY : fonctions/netoyage.cpp.o
+
+fonctions/netoyage.i: fonctions/netoyage.cpp.i
+.PHONY : fonctions/netoyage.i
+
+# target to preprocess a source file
+fonctions/netoyage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/netoyage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/netoyage.cpp.i
+.PHONY : fonctions/netoyage.cpp.i
+
+fonctions/netoyage.s: fonctions/netoyage.cpp.s
+.PHONY : fonctions/netoyage.s
+
+# target to generate assembly for a file
+fonctions/netoyage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/out.dir/build.make CMakeFiles/out.dir/fonctions/netoyage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/fonctions/netoyage.cpp.s
+.PHONY : fonctions/netoyage.cpp.s
+
 fonctions/soustraction.o: fonctions/soustraction.cpp.o
 .PHONY : fonctions/soustraction.o
 
@@ -449,6 +476,9 @@ help:
 	@echo "... fonctions/multiplication.o"
 	@echo "... fonctions/multiplication.i"
 	@echo "... fonctions/multiplication.s"
+	@echo "... fonctions/netoyage.o"
+	@echo "... fonctions/netoyage.i"
+	@echo "... fonctions/netoyage.s"
 	@echo "... fonctions/soustraction.o"
 	@echo "... fonctions/soustraction.i"
 	@echo "... fonctions/soustraction.s"
