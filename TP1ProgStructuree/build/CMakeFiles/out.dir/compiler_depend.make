@@ -1175,6 +1175,7 @@ CMakeFiles/out.dir/fonctions/netoyage.cpp.o: /home/voktes/Desktop/TP1ProgStructu
 
 CMakeFiles/out.dir/fonctions/soustraction.cpp.o: /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/fonctions/soustraction.cpp \
   /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/includes/UtilitairesVecteur.h \
+  /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/includes/netoyage.h \
   /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/includes/soustraction.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \

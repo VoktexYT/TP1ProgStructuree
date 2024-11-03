@@ -1,11 +1,18 @@
-// Biblioth�que fournissant des fonctions utilitaires pour l'utilisation de vecteurs d'entiers
-#include "UtilitairesVecteur.h"
-#include "constantes.h"
+// Bibliothèque fournissant des fonctions utilitaires pour l'utilisation de vecteurs d'entiers.
 #include <iostream>
 
+#include "constantes.h"
+#include "UtilitairesVecteur.h"
 
-// Permutte les valeurs de 2 variables enti�res
-// nb1, nb2: R�f�rences sur les variables � permutter
+
+/**
+ * Permutte les valeurs de 2 variables entières.
+ * 
+ * @param {int&} nb1 Le premier vecteur qui représente un nombre.
+ * @param {int&} nb2 Le deuxième vecteur qui représente un nombre.
+ * @return {void}
+ * @author Joël Beaudet
+ */
 void permutter_entiers(int& nb1, int& nb2)
 {
    int tmp = nb1;
@@ -14,64 +21,63 @@ void permutter_entiers(int& nb1, int& nb2)
 }
 
 
-//
-// Fonctions d�clar�es dans UtilitairesVecteur.h
-//
-
+/**
+ * Permutte les valeurs de 2 variables entières.
+ * 
+ * @param {std::vector<int>&} nombre Le vecteur qui représente un nombre.
+ * @return {void}
+ * @author Joël Beaudet
+ */
 void inverser(std::vector<int>& nombre)
 {
-   // Pour toutes les positions du d�but jusqu'� la moiti�
+   // Pour toutes les positions du début jusqu'à la moitié.
    for (int i = 0; i < nombre.size() / 2; ++i)
    {
-      // On permutte la valeur avec la position sym�trique � partir de la fin
+      // On permutte la valeur avec la position symétrique à partir de la fin.
       permutter_entiers(nombre.at(i), nombre.at(nombre.size() - 1 - i));
    }
 }
 
-
+/**
+ * Rogner les zéros inutiles dans un vecteur entier.
+ * 
+ * @param {std::vector<int>&} nombre Le vecteur qui représente un nombre.
+ * @return {void}
+ * @author Joël Beaudet
+ */
 void rogner_zeros_inutiles(std::vector<int>& nombre)
 {
-   // Puisque les nombres sont invers�s, il faut enlever les 0 de la fin du vecteur
-   // Tant que vecteur contient plus d'un chiffre (n�cessaire pour g�rer le cas o� le nombre est z�ro car on doit laisser un z�ro),
-   // et que le dernier chiffre est z�ro
+   // Puisque les nombres sont inversés, il faut enlever les 0 de la fin du vecteur
+   // Tant que vecteur contient plus d'un chiffre (nécessaire pour gérer le cas où le nombre est zéro car on doit laisser un zéro),
+   // et que le dernier chiffre est zéro
    while (nombre.size() > 1 && nombre.at(nombre.size() - 1) == 0)
    {
-      // On enl�ve le z�ro � la fin
+      // On enlève le zéro à la fin
       nombre.pop_back();
    }
 }
 
-
-void afficher_vecteur_int(std::vector<int> vec)
-{
-   std::cout << "{ ";
-
-   for (int i=0; i<vec.size(); i++)
-   {
-      if (i+1 < vec.size())
-      {
-         std::cout << vec.at(i) << ", ";
-      }
-      else
-      {
-         std::cout << vec.at(i);
-      }
-   }
-
-   std::cout << " }" << std::endl;
-}
-
-
+/**
+ * Égalise la taille des vecteurs en ajoutant des zéros.
+ * 
+ * @param {std::vector<int>&} n1 Le premier vecteur qui représente un nombre.
+ * @param {std::vector<int>&} n2 Le deuxième vecteur qui représente un nombre.
+ * @return {void}
+ * @author Ubert Guertin
+ */
 void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
 {
    int grandeur_vecteur_nombre1 = n1.size();
    int grandeur_vecteur_nombre2 = n2.size();
-   int difference = grandeur_vecteur_nombre1 - grandeur_vecteur_nombre2;
 
+   // Pas besoin d'égaliser si les vecteurs ont la même taille.
    if (grandeur_vecteur_nombre1 == grandeur_vecteur_nombre2)
    {
       return;
    }
+
+
+   int difference = grandeur_vecteur_nombre1 - grandeur_vecteur_nombre2;
 
    inverser(n1);
    inverser(n2);
@@ -98,6 +104,17 @@ void egaliser_taille_vecteur(std::vector<int>& n1, std::vector<int>& n2)
    inverser(n2);
 }
 
+/**
+ * Converti un vecteur entier en nombre entier.
+ * 
+ * @param {std::vector<int>} vec Le vecteur qui représente un nombre.
+ * @return {int} Retourne l'entier que représente le vecteur
+ * @author Ubert Guertin
+ * 
+ * vec = {1, 2, 3, 0}
+ * 
+ * = 1230
+ */
 int vecteur_a_entier(std::vector<int> vec)
 {
    int entier = 0;

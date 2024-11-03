@@ -154,5 +154,6 @@ CMakeFiles/out.dir/fonctions/soustraction.cpp.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
+ /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/netoyage.h \
  /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/soustraction.h \
  /home/voktes/Desktop/TP1ProgStructuree/TP1ProgStructuree/./includes/UtilitairesVecteur.h
