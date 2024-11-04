@@ -7,7 +7,7 @@
 
 
 /**
- * Permutte les valeurs de 2 variables entières.
+ *  Permutent les valeurs de 2 variables entières.
  * 
  * @param {int&} nb1 Le premier vecteur qui représente un nombre.
  * @param {int&} nb2 Le deuxième vecteur qui représente un nombre.
@@ -23,7 +23,7 @@ void permutter_entiers(int& nb1, int& nb2)
 
 
 /**
- * Permutte les valeurs de 2 variables entières.
+ * Permutent les valeurs de 2 variables entières.
  * 
  * @param {std::vector<int>&} nombre Le vecteur qui représente un nombre.
  * @return {void}
@@ -34,7 +34,7 @@ void inverser(std::vector<int>& nombre)
    // Pour toutes les positions du début jusqu'à la moitié.
    for (int i = 0; i < nombre.size() / 2; ++i)
    {
-      // On permutte la valeur avec la position symétrique à partir de la fin.
+      // On permute la valeur avec la position symétrique à partir de la fin.
       permutter_entiers(nombre.at(i), nombre.at(nombre.size() - 1 - i));
    }
 }
@@ -150,7 +150,7 @@ int vecteur_a_entier(std::vector<int> vec)
  * 
  * @param {std::vector<int>} nbr1 Le premier vecteur qui représente un nombre.
  * @param {std::vector<int>} nbr2 Le deuxième vecteur qui représente un nombre.
- * @return {bool} Retourne true si le premier vecteur nombre est plus grand que le deuxième.
+ * @return {bool} Retourne "true" si le premier vecteur nombre est plus grand que le deuxième.
  * @author Ubert Guertin
  * 
  * nbr1 = {1, 2, 3, 0}
@@ -160,13 +160,13 @@ int vecteur_a_entier(std::vector<int> vec)
  */
 bool premier_vecteur_plus_grand_que_deuxieme(std::vector<int> nbr1, std::vector<int> nbr2, bool plusGrandEgale)
 {
-   // Enlève les zéros inutile dans le vecteur.
+   // Enlève les zéros inutiles dans le vecteur.
    netoyage_vecteur_nombre(nbr1, true);
    netoyage_vecteur_nombre(nbr2, true);
 
    if (nbr1.size() == nbr2.size())
    {
-      // Essayer de trouver le un chiffre different dans le nombre
+      // Essaye de trouver un chiffre différent dans le nombre
       for (int i=0; i<nbr1.size(); i++)
       {
          int chiffreNombre1 = nbr1.at(i);
@@ -178,45 +178,10 @@ bool premier_vecteur_plus_grand_que_deuxieme(std::vector<int> nbr1, std::vector<
          }
       }
 
-      // Les deux nombres ont les mêmes chiffres, donc égale.
+      // Les deux nombres ont les mêmes chiffres, donc égaux.
       return plusGrandEgale;
    }
 
-   // Retourne si la taille des unités est supérieur. (Centaine > dizaine) {2, 3, 4} > {3, 2}
+   // Retourne "true" si la taille des unités est supérieure. (Centaine > Dizaine) {2, 3, 4} > {3, 2}
    return nbr1.size() > nbr2.size();
 }
-
-
-/**
- * IMPORTANT : Fonction utilisée dans les tests unitaires.
- *             Donc inutile au fonctionnement du programme principale.
- * Fonction qui converti une chaine de caractère en vecteur entier.
- * C'est beaucoup plus rapide écrire "123 456 789" que {1, 2, 3, 4, 5, 6, 7, 8, 9}
- * 
- * @param {std::string} nombre
- * @return {std::vector<int>} Retourne la convertion entre le string nombre et un vecteur entier
- * @author Ubert Guertin
- * 
- * nombre = "1 234"
- * 
- * = {1, 2, 3, 4}
- */
-std::vector<int> convertire_nombre_string_en_vecteur(std::string nombre)
-{
-   std::vector<int> resultat = {};
-
-   for (int i=0; i<nombre.size(); i++)
-   {
-      char caractere = nombre.at(i);
-
-      // Le chiffre récupérer est l'index trouver en cherchant dans CHIFFRES
-      if (isdigit(caractere))
-      {
-         int chiffre = CHIFFRES.find(caractere);
-         resultat.push_back(chiffre);
-      }
-   }
-
-   return resultat;
-}
-

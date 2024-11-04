@@ -14,25 +14,13 @@ Les fonctions dans ce fichier permettent de lire et afficher les nombres dans le
 #include "UtilitairesVecteur.h"
 
 
-/**
- * Afficher un vecteur entier avec un espacement tous les FREQUENCE_ESPACEMENT chiffres.
- * 
- * @param {std::vector<int>} vecteur Le vecteur qui représente un nombre.
- * @return {void}
- * @author Ubert Guertin
- * 
- * vec = {1, 2, 3, 4, 5, 6, 7, 8, 9}
- * FREQUENCE_ESPACEMENT = 3
- * 
- * = 123 456 789
- */
 void afficher(std::vector<int> vecteur)
 {
     for (int i=vecteur.size()-1; i>=0; i--)
     {
         std::cout << vecteur.at(i);
 
-        // Executé à tous les x chiffres
+        // Exécuté à tous les x chiffres
         if (i % FREQUENCE_ESPACEMENT == 0)
         {
             std::cout << " ";
@@ -41,15 +29,13 @@ void afficher(std::vector<int> vecteur)
 }
 
 
-/**
- * Lire l'entré de l'utilisateur et s'arrêter losqu'un opérateur est détecté.
-*/
 bool lire_premier_nombre_et_operateur(std::vector<int> &nombre1, char &operateur)
 {
-    nombre1 = {};
+    nombre1 = VECTEUR_VIDE;
 
     while (true)
     {
+        // Récupère un caractère et l'ajoute à "nombre1" si c'est un chiffre.
         char caractere;
         std::cin >> caractere;
 
@@ -63,6 +49,7 @@ bool lire_premier_nombre_et_operateur(std::vector<int> &nombre1, char &operateur
             }
         }
 
+        // Vérifie si le caractère spécial est un opérateur
         else
         {
             for (int i=0; i<OPERATEURS.size(); i++)
@@ -82,12 +69,14 @@ bool lire_premier_nombre_et_operateur(std::vector<int> &nombre1, char &operateur
     return false;
 }
 
+
 bool lire_deuxieme_nombre(std::vector<int> &nombre2)
 {
-    nombre2 = {};
+    nombre2 = VECTEUR_VIDE;
 
     while (true)
     {
+        // Récupère un caractère et l'ajoute à "nombre1" si c'est un chiffre.
         char caractere;
         std::cin >> caractere;
 
@@ -101,6 +90,7 @@ bool lire_deuxieme_nombre(std::vector<int> &nombre2)
             }
         }
 
+        // Vérifie si le caractère spécial est un égale.
         else
         {
             return caractere == EGALE && nombre2.size() > 0;

@@ -18,7 +18,7 @@ const char MODULO = '%';
 const char EXPOSANT = '^';
 const char EGALE = '=';
 
-// Tous les opérateurs enssembles
+// Tous les opérateurs ensemble
 const std::vector<char> OPERATEURS = {
     ADDITION, 
     SOUSTRACTION, 
@@ -34,11 +34,12 @@ const std::vector<char> OPERATEURS = {
 const int CODE_ERREUR = -1;
 const std::vector<int> CODE_ERREUR_DIV_MOD = {CODE_ERREUR};
 
-// Les cas qui revient souvent
+// Les cas qui reviennent souvent
 const std::vector<int> VECTEUR_ZERO = {0};
 const std::vector<int> VECTEUR_UN = {1};
+const std::vector<int> VECTEUR_VIDE = {};
 
-// la fréeuence d'espacement entre chaque chiffre
+// La fréquence d'espacement entre chaque chiffre
 const int FREQUENCE_ESPACEMENT = 3;
 
 // Les signes
